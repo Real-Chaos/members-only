@@ -1,8 +1,197 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+body {
+    background: url('https://wallpapersflix.com/cool/wp-content/uploads/2020/07/Cool-Wallpaper-For-Laptop.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.delete-message {
+  color: red;
+  font-size: 25px;
+}
+
+/*------------------------------------------------------------------------------------------------------ Header -----------------------------------------------------------------------------------------*/
+
+.app-header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1% 3%;
+    width: 100%;
+    top: 0;
+}
+
+.app-header nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.app-header nav .logo {
+    justify-content: start;
+}
+
+.app-header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+.app-header a {
+  color: white;
+  text-decoration: none;
+  padding: 0 15px;
+}
+
+.app-header a i {
+  padding-right: 5px;
+  color: blue;
+}
+
+/*----------------------------------------------------------------------------------------------------- Sign Up -----------------------------------------------------------------------------------------*/
+
+.sign-up, .log-in, .member-form, .admin-form {
+  padding: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up-form, .log-in-form, .member-form form, .admin-form form {
+  background: #141414;
+  display: grid;
+  padding: 3% 3%;
+}
+
+.sign-up-form h1, .log-in-form h1, .member-form form h1, .admin-form form h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 7px;
+}
+
+.sign-up-form input, .log-in-form input, .member-form form input, .admin-form form input {
+  color: white;
+  width: 400px;
+  padding: 9px 20px;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  background: none;
+  margin: 8px 0;
+}
+
+.sign-up-form button, .log-in-form button, .member-form form button, .admin-form form button {
+  padding: 7px;
+  margin-top: 20px;
+  background: none;
+  outline: none;
+  border: solid white;
+  border-radius: 5px;
+  color: white;
+  font-size: 17px;
+  font-weight: bolder;
+}
+
+/*------------------------------------------------------------------------------------------------------Msg Form-----------------------------------------------------------------------------------------*/
+
+.new-message-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 0;
+  color: white;
+}
+
+.new-message-form form {
+  background: #141414;
+  width: 50%;
+  padding: 3% 7%;
+}
+
+.new-message-form form input, .new-message-form form textarea, .new-message-form form button {
+  width: 100%;
+  background: none;
+  color: white;
+  outline: none;
+  border: 1px solid white;
+  padding: 10px;
+  margin: 10px;
+  resize: vertical;
+}
+
+.new-message-form form textarea {
+  height: 150px;
+}
+
+
+
+/*----------------------------------------------------------------------------------------------------- homepage-----------------------------------------------------------------------------------------*/
+
+.message-card {
+  padding: 2% 20%;
+}
+
+
+.message-card-content {
+  /* background: #141414; */
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  box-shadow: 0 0 30px rgb(214 215 216/60%);
+  width: 50%;
+  border-radius: 10px;
+  margin: auto;
+  padding: 2% 8%;
+  width: 70%;
+  min-height: 200px;
+}
+
+.title {
+  /* color: #843c34; */
+  color: #c1c1c1;
+  font-weight: bolder;
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-bottom: solid white;
+  padding-bottom: 7px;
+}
+
+.message, .author {
+  /* color: #f8b195; */
+  color: #aaaaaa;
+  font-weight: 600;
+  font-size: 17px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 20px;
+  padding: 10px;
+}
+
+
+.please-log-in {
+  color: white;
+  text-align: center;
+  height: 80vh;
+  margin-top: 300px;
+}
+
+
+.please-log-in button {
+  display: block;
+  margin: auto;
+  background: none;
+  width: 15%;
+  outline: none;
+  border: solid white;
+  padding: 10px;
+  font-size: 25px;
+  margin-top: 30px;
+}
+
+.please-log-in a {
+  text-decoration: none;
+  color: white;
 }

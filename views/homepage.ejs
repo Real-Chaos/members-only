@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  </head>
+  <body>
+    <%- include('./partials/header', {user}) %>
+  
+    <% if(user) { %>
+      <% messages.forEach(message => { %>
+        <div class="message-card">
+          <div class="message-card-content">
+            <h3 class="title"><%= message.title %></h3>
+            <h6 class="message"><%= message.message %></h6>
+            <% if(user.member) { %>
+              <h6 class="author"><%= message.author %></h6>
+            <% } else if(user.username == message.author) { %>
+              <h6 class="author"><%= user.username %></h6>
+            <% } %>
+            <h6 class="author">Sent on: <%= date.format(message.createdAt, "HH/MM") %></h6>
+            <% if(user.admin) { %>
+              <h1 class="delete-message" data-msg="<%= message._id %>">DELETE</h1>
+          <% } %>
+          </div>
+        </div>
+      <% }) %>
+    <% } else { %>
+      <div class="please-log-in">
+        <h1 class="please-log-in-text">Please Login to see the messages</h1>
+        <button class="please-log-in-button"><a href="/log-in">Login</a></button>
+      </div>
+    <% } %>
+    <script>
+      const trash = document.querySelector('.delete-message')
+      trash.addEventListener('click', e => {
+        fetch('/', {
+          method: 'DELETE',
+          body: JSON.stringify({
+          id: trash.dataset.msg
+        }),
+          headers: {
+            'Content-type': 'application/json'
+          }
+        })
+        .then(response => response.json())
+        .then(data => window.location.href = data.redirect)
+      })
+    </script>
+  </body>
+</html>

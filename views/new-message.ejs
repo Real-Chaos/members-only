@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members Only | New Message</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+    <%- include('./partials/header', {user}) %>
+    <div class="new-message-form">
+        <form action="/new-message" method="POST">
+            <h1>Create Message</h1>
+            <input type="text" name="title" placeholder="Title">
+            <textarea name="message" cols="30" placeholder="Message"></textarea>
+            <button>Send Message</button>
+        </form>
+    </div>
+</body>
+</html>
