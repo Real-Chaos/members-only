@@ -76,7 +76,7 @@ body {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
-	border: 2px solid #ffffff;
+	/* border: 2px solid #ffffff; */
 }
 
 /* User Profile Card */
@@ -130,7 +130,7 @@ body {
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
-	border: 2px solid #ffffff;
+	/* border: 2px solid #ffffff; */
 	margin-right: 10px; /* Space between image and username */
 }
 
@@ -218,7 +218,7 @@ body {
 	width: 35px;
 	height: 35px;
 	border-radius: 50%;
-	border: 2px solid #ffffff;
+	/* border: 2px solid #ffffff; */
 }
 
 .chat-username {
@@ -312,11 +312,15 @@ body {
 
 /* Profile Image */
 .user-profile-card .profile-image {
-	width: 80px; /* Maintain size */
-	height: 80px;
+	width: 80px !important; /* Maintain size */
+	height: 80px !important;
 	border-radius: 50%;
-	border: 3px solid #00ccff;
+	border: none;
+	/* border: 1px solid #00ccff; */
 	box-shadow: 0 0 15px rgba(0, 204, 255, 0.6), 0 0 25px rgba(0, 153, 255, 0.4);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /* Profile Details */
@@ -351,34 +355,40 @@ body {
 
 /* Log Out Link */
 .user-profile-card .logout-button {
-  display: inline-block; /* Makes the anchor behave like a button */
-  text-decoration: none; /* Removes underline from the link */
-  margin-top: 10px;
-  padding: 8px 15px;
-  border-radius: 8px;
-  background: linear-gradient(45deg, #ff4d4d, #cc0000); /* Red gradient */
-  color: #ffffff;
-  font-size: 0.85rem;
-  font-weight: bold;
-  text-align: center; /* Centers text inside the button */
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4); /* Red glow effect */
-  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+	display: inline-block; /* Makes the anchor behave like a button */
+	text-decoration: none; /* Removes underline from the link */
+	margin-top: 10px;
+	padding: 8px 15px;
+	border-radius: 8px;
+	background: linear-gradient(45deg, #ff4d4d, #cc0000); /* Red gradient */
+	color: #ffffff;
+	font-size: 0.85rem;
+	font-weight: bold;
+	text-align: center; /* Centers text inside the button */
+	cursor: pointer;
+	box-shadow: 0 0 10px rgba(255, 0, 0, 0.4); /* Red glow effect */
+	transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .user-profile-card .logout-button:hover {
-  transform: scale(1.05); /* Slight hover effect */
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.6); /* Stronger red glow on hover */
-  background: linear-gradient(45deg, #ff6666, #e60000); /* Brighter red gradient on hover */
+	transform: scale(1.05); /* Slight hover effect */
+	box-shadow: 0 0 20px rgba(255, 0, 0, 0.6); /* Stronger red glow on hover */
+	background: linear-gradient(
+		45deg,
+		#ff6666,
+		#e60000
+	); /* Brighter red gradient on hover */
 }
 
 .user-profile-card .logout-button:active {
-  transform: scale(0.98); /* Slight compression when clicked */
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); /* Reduced glow */
-  background: linear-gradient(45deg, #cc0000, #990000); /* Darker red when clicked */
+	transform: scale(0.98); /* Slight compression when clicked */
+	box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); /* Reduced glow */
+	background: linear-gradient(
+		45deg,
+		#cc0000,
+		#990000
+	); /* Darker red when clicked */
 }
-
-
 
 /* Scrollable lists */
 .group-list ul,
