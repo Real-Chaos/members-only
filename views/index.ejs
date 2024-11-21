@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Storm Chat</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="loader.css" />
+	</head>
+	<body>
+		<div id="preloader">
+			<div class="loading-animation">
+				<div class="spinner"></div>
+				<p>Loading...</p>
+			</div>
+		</div>
+		<div class="chat-app">
+			<!-- Sidebar -->
+			<aside class="sidebar">
+				<!-- Direct Messages Section -->
+				<div class="dms-section">
+					<h3>⚡ Direct Messages</h3>
+					<input
+						type="text"
+						placeholder="Search DMs..."
+						class="search-bar"
+						id="dm-search"
+					/>
+					<ul id="dm-list">
+						<li class="dm-item">
+							<img
+								src="https://i0.wp.com/www.the-beskirted-man.com/wp-content/uploads/2024/06/907a6fba-4e2a-4d96-92bf-ebe90f278bcb.jpg?fit=1024%2C1024&ssl=1"
+								alt="DM1"
+								class="dm-pic"
+							/>
+							<span>Bob</span>
+						</li>
+						<li class="dm-item">
+							<img
+								src="https://www.goarch.org/documents/32058/2160187/met-methodios-medium.jpg/8e26222d-a531-4e7f-8126-3f388e2a1f7c?t=1480971800000"
+								alt="DM2"
+								class="dm-pic"
+							/>
+							<span>Miles</span>
+						</li>
+						<li class="dm-item">
+							<img
+								src="https://www.rollingstone.com/wp-content/uploads/2022/10/Get-Out.jpg?w=1581&h=1054&crop=1"
+								alt="DM3"
+								class="dm-pic"
+							/>
+							<span>Xavier</span>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Group Navigation -->
+				<div class="group-list">
+					<h3>⚡ Groups</h3>
+					<input
+						type="text"
+						placeholder="Search Groups..."
+						class="search-bar"
+						id="group-search"
+					/>
+					<ul id="group-list">
+						<li class="group-item">
+							<img
+								src="https://via.placeholder.com/30"
+								alt="Group1"
+								class="group-pic"
+							/>
+							<span>Heroes</span>
+						</li>
+						<li class="group-item">
+							<img
+								src="https://t1.gstatic.com/images?q=tbn:ANd9GcQQn6_Hz9zTckXYuOa1biiMhulnHv6pKtadAFcdg79yocrL3Y29"
+								alt="Group2"
+								class="group-pic"
+							/>
+							<span>Trump Enthusiasts</span>
+						</li>
+						<li class="group-item">
+							<img
+								src="https://media.licdn.com/dms/image/C5612AQGjWMQJt6quOQ/article-cover_image-shrink_720_1280/0/1565744630023?e=2147483647&v=beta&t=XB5Kg9-NU6kFkGB4gpXutU7bX_Nfyqtr0kSRjAcsYAg"
+								alt="Group3"
+								class="group-pic"
+							/>
+							<span>Meme Coins</span>
+						</li>
+						<li class="group-item">
+							<img
+								src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWxV5zrXLv-MWpXlIVtGT1uOUd6GOaurmzhQ&s"
+								alt="Group4"
+								class="group-pic"
+							/>
+							<span>Elon Musk Friends</span>
+						</li>
+					</ul>
+				</div>
+
+				<!-- User Profile -->
+				<%- include('partials/userCard', {user: user}) %>
+			</aside>
+
+			<!-- Main Chat Area -->
+			<main class="chat-area">
+				<!-- Chat Header -->
+				<div class="chat-header">
+					<div class="user-info">
+						<img
+							src="https://static.independent.co.uk/2024/10/31/22/Sexual_Misconduct_Diddy_39380.jpg?width=1200&height=1200&fit=crop"
+							alt="User Avatar"
+							class="profile-pic"
+						/>
+						<span class="chat-username">Diddy</span>
+					</div>
+					<div class="chat-icons">
+						<button class="icon-button">📞</button>
+						<button class="icon-button">🎥</button>
+						<button class="icon-button">⚙️</button>
+					</div>
+				</div>
+
+				<!-- Chat Messages -->
+				<div class="chat-messages">
+					<div class="message user-one">
+						<img
+							src="https://static.independent.co.uk/2024/10/31/22/Sexual_Misconduct_Diddy_39380.jpg?width=1200&height=1200&fit=crop"
+							alt="User1"
+							class="profile-pic"
+						/>
+						<div class="message-content">
+							<p><strong>Diddy:</strong> Yo come to my basement</p>
+						</div>
+					</div>
+					<div class="message user-two">
+						<img
+							src="https://static.vecteezy.com/system/resources/thumbnails/033/348/297/small_2x/man-riding-a-war-horse-free-photo.jpg"
+							alt="User2"
+							class="profile-pic"
+						/>
+						<div class="message-content">
+							<p><strong>Ibn Zayd:</strong>I am busy</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Chat Input -->
+				<div class="chat-input">
+					<input type="text" placeholder="Type your message..." />
+					<button>Send</button>
+				</div>
+			</main>
+		</div>
+		<script src="/script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,446 @@
+/* General Reset */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Orbitron', sans-serif;
+	background: radial-gradient(
+		circle,
+		#07001c,
+		#000000
+	); /* Dark stormy background */
+	color: #ffffff;
+	display: flex;
+	height: 100vh;
+	overflow: hidden;
+}
+
+/* Chat App Layout */
+.chat-app {
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+	width: 25%;
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+		url('https://t4.ftcdn.net/jpg/06/43/87/13/360_F_643871378_4KuTNRktSNSgHSFN7zqg7UIYUn95MlwG.jpg')
+			no-repeat center center/cover;
+	background-blend-mode: multiply;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between; /* User profile at the bottom */
+	padding: 15px;
+}
+
+/* Direct Messages Section */
+.dms-section h3,
+.group-list h3 {
+	color: #0066ff; /* Electric blue */
+	text-shadow: 0 0 5px #0066ff, 0 0 15px #0033cc;
+	margin-bottom: 15px;
+}
+
+.dms-section ul,
+.group-list ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	direction: rtl;
+}
+
+.dm-item,
+.group-item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 10px;
+	padding: 10px 15px;
+	background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+	border-radius: 8px;
+	cursor: pointer;
+	transition: box-shadow 0.3s ease, transform 0.2s;
+	direction: ltr;
+}
+
+.dm-item:hover,
+.group-item:hover,
+.group-item.active {
+	box-shadow: 0 0 15px rgba(0, 110, 255, 0.5);
+	transform: scale(1.05);
+}
+
+.dm-pic,
+.group-pic {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 2px solid #ffffff;
+}
+
+/* User Profile Card */
+.user-profile-card {
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),
+		url('https://t3.ftcdn.net/jpg/08/73/83/92/360_F_873839297_JUsv6MmOlxZhQ0ksooFNWM7gdE7dfeW6.jpg')
+			no-repeat center center/cover;
+	border-radius: 10px;
+	padding: 15px;
+	box-shadow: 0 0 20px rgba(0, 102, 255, 0.4), 0 0 35px rgba(0, 51, 204, 0.3);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #ffffff;
+}
+
+.user-profile-card .profile-image {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	border: 3px solid #00ccff;
+	box-shadow: 0 0 15px rgba(0, 204, 255, 0.6), 0 0 25px rgba(0, 153, 255, 0.4);
+}
+
+/* Main Chat Area */
+.chat-area {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+/* Chat Messages */
+.chat-messages {
+	flex: 1;
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+		url('https://t4.ftcdn.net/jpg/06/43/87/13/360_F_643871378_4KuTNRktSNSgHSFN7zqg7UIYUn95MlwG.jpg')
+			no-repeat center center/cover;
+	background-blend-mode: multiply;
+	padding: 20px;
+	overflow-y: auto;
+}
+
+.chat-messages .message {
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+.message img.profile-pic {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border: 2px solid #ffffff;
+	margin-right: 10px; /* Space between image and username */
+}
+
+.message-content {
+	background: rgba(0, 0, 0, 0.7);
+	padding: 10px 15px;
+	border-radius: 10px;
+	max-width: 60%;
+	color: #ffffff;
+	box-shadow: 0 0 15px rgba(0, 102, 255, 0.5);
+}
+
+.message.user-one .message-content {
+	background: rgba(0, 102, 255, 0.6);
+}
+
+.message.user-two .message-content {
+	background: rgba(255, 105, 180, 0.6);
+	align-self: flex-end;
+}
+
+/* Chat Input */
+.chat-input {
+	display: flex;
+	align-items: center;
+	padding: 15px 20px;
+	background: rgba(0, 0, 0, 0.8);
+	border-top: 3px solid rgba(0, 102, 255, 0.6);
+}
+
+.chat-input input {
+	flex: 1;
+	padding: 15px;
+	border-radius: 10px;
+	border: none;
+	background: rgba(0, 0, 0, 0.6);
+	color: #ffffff;
+	font-size: 1rem;
+	margin-right: 15px;
+	outline: none;
+	box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
+	transition: all 0.3s ease;
+}
+
+.chat-input input:focus {
+	box-shadow: 0 0 10px rgba(0, 102, 255, 0.8);
+}
+
+.chat-input button {
+	padding: 15px 20px;
+	border-radius: 10px;
+	border: none;
+	background: linear-gradient(45deg, #006eff, #00ccff);
+	color: #ffffff;
+	cursor: pointer;
+	box-shadow: 0 0 15px rgba(0, 102, 255, 0.4);
+	transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.chat-input button:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0 25px rgba(0, 102, 255, 0.6);
+}
+
+/* Chat Header */
+.chat-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 20px;
+	background: rgba(0, 0, 0, 0.85); /* Dark translucent background */
+	box-shadow: 0 2px 10px rgba(0, 102, 255, 0.3); /* Subtle separation */
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.user-info {
+	display: flex;
+	align-items: center;
+	gap: 10px; /* Space between profile image and username */
+}
+
+.chat-header .profile-pic {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	border: 2px solid #ffffff;
+}
+
+.chat-username {
+	font-size: 1rem;
+	font-weight: bold;
+	color: #ffffff;
+	text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Chat Icons */
+.chat-icons {
+	display: flex;
+	gap: 10px; /* Space between buttons */
+}
+
+.icon-button {
+	background: rgba(0, 0, 0, 0.6); /* Transparent button background */
+	color: #ffffff;
+	border: none;
+	padding: 10px;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.3s ease;
+	box-shadow: 0 0 10px rgba(0, 102, 255, 0.4); /* Subtle electric glow */
+}
+
+.icon-button:hover {
+	transform: scale(1.1);
+	box-shadow: 0 0 15px rgba(0, 102, 255, 0.6);
+}
+
+/* Chat Input */
+.chat-input {
+	display: flex;
+	align-items: center;
+	padding: 15px 20px;
+	background: rgba(0, 0, 0, 0.85); /* Same dark background as the header */
+	box-shadow: 0 -2px 10px rgba(0, 102, 255, 0.3); /* Subtle box shadow at the top */
+}
+
+.chat-input input {
+	flex: 1;
+	padding: 15px;
+	border-radius: 10px;
+	border: none;
+	background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+	color: #ffffff;
+	font-size: 1rem;
+	margin-right: 15px;
+	outline: none;
+	box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
+	transition: all 0.3s ease;
+}
+
+.chat-input input:focus {
+	box-shadow: 0 0 10px rgba(0, 102, 255, 0.8);
+}
+
+.chat-input button {
+	padding: 15px 20px;
+	border-radius: 10px;
+	border: none;
+	background: linear-gradient(45deg, #006eff, #00ccff);
+	color: #ffffff;
+	cursor: pointer;
+	box-shadow: 0 0 15px rgba(0, 102, 255, 0.4);
+	transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.chat-input button:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0 25px rgba(0, 102, 255, 0.6);
+}
+
+/* User Profile Card */
+.user-profile-card {
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+		url('https://t3.ftcdn.net/jpg/08/73/83/92/360_F_873839297_JUsv6MmOlxZhQ0ksooFNWM7gdE7dfeW6.jpg')
+			no-repeat center center/cover;
+	background-blend-mode: multiply;
+	border-radius: 15px;
+	padding: 15px 15px; /* Reduced padding */
+	box-shadow: 0 0 20px rgba(0, 102, 255, 0.4), 0 0 35px rgba(0, 51, 204, 0.3);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2px; /* Reduced vertical spacing between elements */
+	color: #ffffff;
+	max-height: 300px; /* Limit vertical size */
+}
+
+/* Profile Image */
+.user-profile-card .profile-image {
+	width: 80px; /* Maintain size */
+	height: 80px;
+	border-radius: 50%;
+	border: 3px solid #00ccff;
+	box-shadow: 0 0 15px rgba(0, 204, 255, 0.6), 0 0 25px rgba(0, 153, 255, 0.4);
+}
+
+/* Profile Details */
+.user-profile-card .profile-details {
+	text-align: center;
+	color: #cccccc;
+}
+
+.user-profile-card .profile-details h3 {
+	color: #00ccff;
+	font-size: 1.4rem; /* Slightly reduced font size */
+	text-shadow: 0 0 5px #00ccff, 0 0 10px #00ffff;
+}
+
+.user-profile-card .profile-details .status {
+	font-size: 1rem;
+	color: #00ff66;
+	text-shadow: 0 0 5px #00ff66, 0 0 10px #32ff32;
+}
+
+.user-profile-card .profile-details .about-me {
+	font-size: 0.85rem; /* Slightly reduced size */
+	color: #cccccc;
+	font-style: italic;
+}
+
+.user-profile-card .profile-details .date-joined {
+	font-size: 0.85rem; /* Matches about me */
+	color: #aaaaaa;
+	font-style: italic;
+}
+
+/* Log Out Link */
+.user-profile-card .logout-button {
+  display: inline-block; /* Makes the anchor behave like a button */
+  text-decoration: none; /* Removes underline from the link */
+  margin-top: 10px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #ff4d4d, #cc0000); /* Red gradient */
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-align: center; /* Centers text inside the button */
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4); /* Red glow effect */
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.user-profile-card .logout-button:hover {
+  transform: scale(1.05); /* Slight hover effect */
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.6); /* Stronger red glow on hover */
+  background: linear-gradient(45deg, #ff6666, #e60000); /* Brighter red gradient on hover */
+}
+
+.user-profile-card .logout-button:active {
+  transform: scale(0.98); /* Slight compression when clicked */
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); /* Reduced glow */
+  background: linear-gradient(45deg, #cc0000, #990000); /* Darker red when clicked */
+}
+
+
+
+/* Scrollable lists */
+.group-list ul,
+.dms-section ul {
+	max-height: 150px; /* Adjust based on desired height */
+	overflow-y: auto; /* Enable vertical scrolling */
+	padding-right: 10px; /* Space for scrollbar */
+	overflow-x: hidden !important;
+}
+
+/* Customize scrollbar */
+.group-list ul::-webkit-scrollbar,
+.dms-section ul::-webkit-scrollbar {
+	width: 8px; /* Thin scrollbar width */
+}
+
+.group-list ul::-webkit-scrollbar-track,
+.dms-section ul::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.7); /* Dark track background */
+	border-radius: 10px; /* Rounded corners for the track */
+}
+
+.group-list ul::-webkit-scrollbar-thumb,
+.dms-section ul::-webkit-scrollbar-thumb {
+	background: linear-gradient(45deg, #006eff, #00ccff); /* Stormy gradient */
+	border-radius: 10px; /* Rounded corners for the thumb */
+	box-shadow: 0 0 10px rgba(0, 102, 255, 0.5); /* Electric glow */
+}
+
+.group-list ul::-webkit-scrollbar-thumb:hover,
+.dms-section ul::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(
+		45deg,
+		#0044cc,
+		#0099ff
+	); /* Brighter gradient on hover */
+	box-shadow: 0 0 15px rgba(0, 110, 255, 0.7); /* Stronger glow on hover */
+}
+
+/* Search Bar Styling */
+.search-bar {
+	width: calc(100% - 45px); /* Ensures the width respects the div's padding */
+	padding: 12px 15px; /* Increased padding for a more comfortable look */
+	margin-bottom: 10px;
+	margin-top: 5px; /* Spacing from the header */
+	border-radius: 8px;
+	border: none;
+	background: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+	color: #ffffff;
+	font-size: 1rem; /* Slightly larger for readability */
+	box-shadow: inset 0 0 5px rgba(0, 102, 255, 0.5),
+		0 0 10px rgba(0, 102, 255, 0.3); /* Inner and outer glow */
+	outline: none;
+	transition: box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.search-bar::placeholder {
+	color: rgba(180, 180, 255, 0.8); /* Subtle stormy glow */
+	font-style: italic;
+}
+
+.search-bar:focus {
+	background: rgba(0, 0, 0, 0.9); /* Darker background when focused */
+	box-shadow: 0 0 15px rgba(0, 102, 255, 0.8), 0 0 25px rgba(0, 110, 255, 0.5); /* Stronger outer glow on focus */
+}

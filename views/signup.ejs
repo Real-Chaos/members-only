@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Signup - Storm Chat</title>
+		<link rel="stylesheet" href="forms.css" />
+		<link rel="stylesheet" href="loader.css" />
+	</head>
+	<body>
+		<div id="preloader">
+			<div class="loading-animation">
+				<div class="spinner"></div>
+				<p>Loading...</p>
+			</div>
+		</div>
+		<div class="form-container">
+			<div class="form-header">
+				<h1>⚡ Storm Signup ⚡</h1>
+				<p>Join the electrifying storm!</p>
+			</div>
+			<form action="/signup" method="POST" class="form-body">
+				<input
+					type="url"
+					id="profile_image_url"
+					name="profile_image_url"
+					placeholder="Profile Image URL"
+					required
+				/>
+				<input
+					type="text"
+					id="username"
+					name="username"
+					placeholder="Username"
+					required
+				/>
+				<input
+					type="password"
+					id="password"
+					name="password"
+					placeholder="Password"
+					required
+				/>
+				<input
+					type="text"
+					id="special_line"
+					name="special_line"
+					placeholder="Special Line (e.g., 'Connected to the Storm')"
+					required
+				/>
+				<textarea
+					id="description"
+					name="description"
+					rows="4"
+					placeholder="About Me (Write something about yourself)"
+					required
+				></textarea>
+				<button type="submit">Sign Up</button>
+			</form>
+			<p class="form-footer">
+				Already have an account? <a href="/login">Log in</a>
+			</p>
+		</div>
+		<script src="/script.js"></script>
+	</body>
+</html>

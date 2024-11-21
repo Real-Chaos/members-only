@@ -1,0 +1,117 @@
+/* General Styling */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Orbitron', sans-serif;
+	/* background: radial-gradient(circle, #07001c, #000000); Dark stormy background */
+	color: #ffffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	overflow: hidden;
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+		url('https://images.pexels.com/photos/416920/pexels-photo-416920.jpeg')
+			no-repeat center center/cover;
+}
+
+a {
+	color: #00ccff; /* Electric blue */
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+a:hover {
+	color: #0099cc;
+}
+
+/* Form Container */
+.form-container {
+	background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+		;
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 0 0 15px rgba(0, 110, 255, 0.3), 0 0 30px rgba(64, 128, 255, 0.2);
+	width: 400px;
+	text-align: center;
+}
+
+/* Form Header */
+.form-header h1 {
+	margin: 0 0 10px;
+	font-size: 2rem;
+	color: #00ccff; /* Neon cyan */
+	text-shadow: 0 0 5px #00ccff, 0 0 15px #00ffff;
+}
+
+.form-header p {
+	margin: 0;
+	font-size: 1rem;
+	color: #cccccc;
+}
+
+/* Form Body */
+.form-body {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	gap: 20px; /* Adds space between inputs */
+}
+
+.form-body input,
+.form-body textarea {
+	padding: 15px; /* Increased padding for a better look */
+	border: none;
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+	color: #ffffff;
+	font-size: 1rem;
+	box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
+	outline: none;
+	transition: all 0.3s ease-in-out;
+	resize: none; /* Prevent resizing */
+	max-height: 150px; /* Limit height */
+}
+
+/* Cool Hover and Focus Effect */
+.form-body input:focus,
+.form-body textarea:focus {
+	box-shadow: 0 0 15px rgba(0, 110, 255, 0.8), 0 0 25px rgba(0, 204, 255, 0.6);
+	background: rgba(0, 0, 0, 0.8); /* Slightly darker on focus */
+	transform: scale(1.02); /* Subtle scaling effect */
+}
+
+/* Button */
+.form-body button {
+	padding: 15px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border: none;
+	border-radius: 10px;
+	background: linear-gradient(45deg, #006eff, #00ccff); /* Electric gradient */
+	color: #ffffff;
+	cursor: pointer;
+	box-shadow: 0 0 15px rgba(0, 110, 255, 0.4);
+	transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.form-body button:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0 25px rgba(0, 110, 255, 0.6);
+}
+
+/* Form Footer */
+.form-footer {
+	margin-top: 15px;
+	font-size: 0.9rem;
+	color: #cccccc;
+}
+
+
+/* Style for all input and textarea placeholders */
+::placeholder {
+  color: rgba(200, 200, 255, 0.8); /* Light stormy blue */
+  font-style: italic; /* Optional: adds a stylish touch */
+}
+
+
