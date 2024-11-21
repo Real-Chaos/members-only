@@ -85,7 +85,6 @@ app.use((req, res, next) => {
 })
 
 app.get('/', isAuth, (req, res) => {
-	console.log(req.user)
 	res.render('index', { user: req.user })
 })
 
@@ -113,7 +112,6 @@ app.post('/signup', (req, res, next) => {
 			]
 			await pool.query(query, values)
 			res.redirect('/')
-			console.log(query)
 		} catch (err) {
 			return next(err)
 		}
